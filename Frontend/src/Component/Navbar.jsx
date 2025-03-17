@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom'
+import '../index.module.css'
 const Navbar =()=>{
 const style = {
     display: 'flex',
@@ -6,6 +7,7 @@ const style = {
     justifyContent:'right',
     alignContent: 'center',
     alignSelf: 'center',
+    marginTop: '10px',
 
 }
         return (
