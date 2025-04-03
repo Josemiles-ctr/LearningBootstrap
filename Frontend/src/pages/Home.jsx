@@ -2,7 +2,7 @@ import '../index.module.css'
 const Home =()=>{
 
     return (
-        <form method="POST" action={'/'}>
+        <form method="POST" action={'/register'}>
             <h2>SignUp</h2>
             <label htmlFor="firstname">First Name:</label>
             <input minLength={4}  type="text" required={true} id="firstname"/>

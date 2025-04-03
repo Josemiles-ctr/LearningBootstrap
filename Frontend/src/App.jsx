@@ -5,14 +5,24 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Products from "./pages/Products.jsx";
 import Contact from "./pages/Contact.jsx";
+import './index.module.css'
 import {useEffect} from "react";
+import axios   from "axios";
 function App() {
+const API=  axios.create({
+  baseURL: "http://localhost:5000/employees",
+})
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/employees")
-    .then(res => res.json())
-    .then(data => setData(data))
-    .catch(err => console.log("Failed to fetch resource "+err));
+    // fetch("http://localhost:3000/employees")
+    // .then(res => res.json())
+    // .then(data => setData(data))
+    // .catch(err => console.log("Failed to fetch resource "+err));
+    API.get('/').then(res => {
+      console.log(res)
+      setData(res)
+      console.log(data)
+    })
 
   }, []);
   return (
@@ -20,13 +30,10 @@ function App() {
 <div>
   <Navbar/>
   <div>
-    <h2>Employee List</h2>
     <div>
-      {data.map((employee) => (
-          <form key={employee.employee_id}>
-            <span>   Id :{employee.employee_id} </span><span> First Name : {employee.first_name}</span><span> Last Name :{employee.last_name} </span><span> D.O.B: {employee.birth_date}</span>
-          </form>
-      ))}
+      <h2 className="employee-list">Employee List</h2>
+    </div>
+    <div>
     </div>
   </div>
 
