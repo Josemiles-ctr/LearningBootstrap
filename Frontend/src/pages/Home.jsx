@@ -52,9 +52,6 @@ const Home =()=>{
         
        </div>
        </section>
-       <div className="container border my-3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae iste alias architecto. Ea accusamus eum qui aspernatur quasi ab inventore cumque excepturi nihil magni non, asperiores, explicabo necessitatibus consectetur vero, voluptates itaque. Iusto quae aperiam cum nihil qui voluptatem obcaecati dolor pariatur cumque recusandae, quasi sit reiciendis blanditiis assumenda quam!
-       </div>
     </>
     )
 

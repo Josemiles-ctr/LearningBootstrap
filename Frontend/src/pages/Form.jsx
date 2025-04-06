@@ -3,7 +3,10 @@ import React from 'react'
 function Form() {
   return (
 <div className="container">
-<form className='form-control my-3 p-5 bg-dark text-white rounded-4' action="" noValidate>
+<form style={{
+    backgroundColor:'transparent',
+    color:'white'
+}} className='form-control my-3 p-5 rounded-4' action="">
     <h1 style={{
         textAlign: "center",
         color: "blue",
@@ -67,8 +70,8 @@ function Form() {
            <div className="input-group-text">.00</div>
         </div>
       
-        <label htmlFor="Tel">Tel:</label>
-        <div className="input-group">
+        
+        <div className="input-group mt-3">
             <div className="input-group-text">
                 <select name="" id="" className='form-select no-arrow'>
                     <option className='form-select-option' value="+256">+256</option>
@@ -80,7 +83,10 @@ function Form() {
                     <option value="+12">+12</option>
                 </select>
             </div>
-           <input type="tel" id='Tel' className='form-control' />
+           <div className="form-floating ">
+           <input type="tel" id='Tel' className='form-control' placeholder='tel'/>
+           <label htmlFor="Tel">Tel:</label>
+           </div>
         </div>
         <button type="submit" className='btn btn-primary my-3 d-block mx-auto'>
             Submit</button>

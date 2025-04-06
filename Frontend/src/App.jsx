@@ -2,57 +2,33 @@ import {Routes, Route} from 'react-router-dom'
 // import {useState} from "react";
 import Navbar from "./Component/Navbar.jsx";
 import Home from "./pages/Home.jsx";
-import Form from "./pages/Form.jsx";
-// import About from "./pages/About.jsx";
-// import Products from "./pages/Products.jsx";
-// import Contact from "./pages/Contact.jsx";
+import Form from "./pages/Form.jsx";  
 import './index.module.css'
-// import {useEffect} from "react";
-// import axios   from "axios";
+import Alert from './pages/Alert.jsx';
+import Card from './pages/Card.jsx';
+import Accordion from './pages/accordion.jsx';
+import Model from './pages/Modal.jsx';
+import Cursel from './pages/cursel.jsx';
+import Validate from './pages/validate.jsx';
 function App() {
-// const API=  axios.create({
-//   baseURL: "http://localhost:5000/employees",
-// })
-//   const [data, setData] = useState([]);
-//   useEffect(() => {
-//     // fetch("http://localhost:3000/employees")
-//     // .then(res => res.json())
-//     // .then(data => setData(data))
-//     // .catch(err => console.log("Failed to fetch resource "+err));
-//     API.get('/').then(res => {
-//       console.log(res)
-//       setData(res)
-//       console.log(data)
-//     })
 
-//   },);
   return (
     <>
     <Home/>
+    <Alert/>
+    <Cursel/>
     <Form/>
+    <Validate/>
+    <Accordion/>
+    <div className="card-group">
+    <Card/>
+    <Card/>
+    <Card/>
+    <Card/>
+    <Card/>
+    </div>
+    <Model/>
     </>
-
-/* <div>
-  <Navbar/>
-  <div>
-    <div>
-      <h2 className="employee-list">Employee List</h2>
-    </div>
-    <div>
-    </div>
-  </div>
-
-  <Routes>
-    <Route path='/' element={<Home/>}/>
-    <Route path='/about' element={<About/>}/>
-    <Route path='/contact' element={<Contact/>}/>
-    <Route path='/products' element={<Products />}/>
-  </Routes>
-
-  <p>
-    Hey this will be the footer found across all the pages!
-  </p>
-</div> */
   )
 }
 
